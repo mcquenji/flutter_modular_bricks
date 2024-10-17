@@ -36,6 +36,9 @@ dependencies:
   flutter_svg: ^2.0.10+1
   vector_graphics: any
   flutter_animate: ^4.5.0
+  flutter_utils:
+    git:
+      url: git://github.com/mcquenji/flutter_utils.git
 
 
 dev_dependencies:
