@@ -6,7 +6,7 @@ void run(HookContext context) {
   final service = (context.vars['service'] as String).snakeCase;
   final module = (context.vars['module'] as String).snakeCase;
 
-  final f = File('lib/modules/$module/infra/services/services.dart');
+  final f = File('lib/src/$module/infra/services/services.dart');
 
   context.logger.info("Exporting service impl at ${f.path}");
 

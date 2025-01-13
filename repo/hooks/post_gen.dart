@@ -6,7 +6,7 @@ void run(HookContext context) {
   final module = (context.vars['module'] as String).snakeCase;
 
   final f = File(
-    'lib/modules/$module/presentation/repositories/repositories.dart',
+    'lib/src/$module/presentation/repositories/repositories.dart',
   );
 
   context.logger.info("Exporting repository at ${f.path}");

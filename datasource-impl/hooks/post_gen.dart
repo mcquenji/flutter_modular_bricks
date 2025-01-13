@@ -6,7 +6,7 @@ void run(HookContext context) {
   final datasource = (context.vars['datasource'] as String).snakeCase;
   final module = (context.vars['module'] as String).snakeCase;
 
-  final f = File('lib/modules/$module/infra/datasources/datasources.dart');
+  final f = File('lib/src/$module/infra/datasources/datasources.dart');
 
   context.logger.info("Exporting datasource impl at ${f.path}");
 

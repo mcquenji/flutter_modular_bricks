@@ -57,4 +57,17 @@ void run(HookContext context) async {
   context.logger.warn(
     'Please remember to edit `README.md` to match your project and update the `description` in the `pubspec.yaml` file.',
   );
+
+  for (final platform in context.vars['platforms'] as List<String>) {
+    mason.progress('Setting up platform: $platform');
+
+    await Process.run(
+      'flutter',
+      ['create', '--platforms', platform],
+      runInShell: true,
+      workingDirectory: workDir,
+    );
+
+    mason.complete('Platform setup: $platform');
+  }
 }

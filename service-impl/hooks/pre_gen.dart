@@ -16,7 +16,7 @@ void run(HookContext context) {
 
   // --- Prompt module --- //
 
-  final modulesDir = Directory('lib/modules');
+  final modulesDir = Directory('lib/src');
 
   final modules = modulesDir
       .listSync()
@@ -32,7 +32,7 @@ void run(HookContext context) {
   // --- Prompt service --- //
 
   final servicesDir = Directory(
-    'lib/modules/${(context.vars['module'] as String).snakeCase}/domain/services',
+    'lib/src/${(context.vars['module'] as String).snakeCase}/domain/services',
   );
 
   final services = servicesDir

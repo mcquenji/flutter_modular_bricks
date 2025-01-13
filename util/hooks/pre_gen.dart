@@ -16,7 +16,7 @@ void run(HookContext context) {
 
   // --- Prompt module --- //
 
-  final modulesDir = Directory('lib/modules');
+  final modulesDir = Directory('lib/src');
 
   final modules = modulesDir
       .listSync()
